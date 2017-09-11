@@ -13,13 +13,38 @@
  -->
  <!DOCTYPE html>
 <html>
-<div class="jumbotron text-center container">
-  <h1>News</h1>
-  
+
+<!-- div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">Collapsed content</h4>
+      <span class="text-muted">Toggleable via the navbar brand.</span>
+    </div>
+  </div> -->
+  <!-- <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav> -->
+
+<div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-inverse p-4">
+      <h4 class="text-white">News</h4>
+      <span class="text-muted">“All Our Dreams Can Come True If We Have The Courage To Pursue Them”- Walt Disney</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-inverse bg-inverse">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
 </div>
 
+
+
 <div class="container">
-<nav>
+
   <div class="inner">
     <!--<input class="search_box" type=search placeholder="Search...">
     <div class="search"><i class="fa fa-search"></i></div> -->  
@@ -29,13 +54,13 @@
       </ul> -->
       <!-- <li><input class="search_box" type=search placeholder="Search..."></li>
       <li><div class="search"><i class="fa fa-search"></i></div></li> -->
-		
-      <button routerLink="/search" routerLinkActive="active" class="btn btn-success">NewsSearchComponent</button>
-       <button routerLink="/fav" routerLinkActive="active" class="btn btn-success">FavoriteComponent</button>
+		<button routerLink="/topNews" routerLinkActive="active" class="btn btn-success">Top 10 News</button>
+      <button routerLink="/search" routerLinkActive="active" class="btn btn-success">Search News</button>
+       <button routerLink="/fav" routerLinkActive="active" class="btn btn-success">Favourite News</button>
       
     
   </div>
-  </nav>
+  
  <!-- <select name="search" #searchTerm$>
  	<option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
  </select>
@@ -44,8 +69,59 @@
  --> 
 
 </div>
+
+<router-outlet></router-outlet>
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
+<footer>
+    <div class="container-fluid bg-primary py-3 fixed-bottom">
+   <div class="container">
+     <div class="row">
+       <div class="col-md-7">
+           <div class="row py-0">
+         <div class="col-sm-1 hidden-md-down">
+             <a class="bg-circle bg-info" href="#">
+               <i class="fa fa-2x fa-fw fa-address-card" aria-hidden="true "></i>
+             </a>
+           </div>
+           <div class="col-sm-11 text-white">
+               <div><h4>  Contact</h4>
+                   <p>   <span class="header-font"></span>News<span class="header-font">w</span>world.com</p>
+               </div>
+           </div>
+           </div>
+       </div>
+       <div class="col-md-5">
+         <div class="d-inline-block">
+           <div class="bg-circle-outline d-inline-block" style="background-color:#3b5998
+">
+             <a href="https://www.facebook.com/"><i class="fa fa-2x fa-fw fa-facebook text-white"></i>
+        </a>
+           </div>
+           <div class="bg-circle-outline d-inline-block" style="background-color:#4099FF
+">
+             <a href="https://twitter.com/">
+               <i class="fa fa-2x fa-fw fa-twitter text-white"></i></a>
+           </div>            <div class="bg-circle-outline d-inline-block" style="background-color:#0077B5
+">
+             <a href="https://www.linkedin.com/company/">
+               <i class="fa fa-2x fa-fw fa-linkedin text-white"></i></a>
+           </div>
+           <div class="bg-circle-outline d-inline-block" style="background-color:#d34836
+">
+             <a href="https://www.google.com/">
+               <i class="fa fa-2x fa-fw fa-google text-white"></i></a>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   </div>
+</footer>
+   <!--/.footer-->
+
 </html>
 
 
 
-    <router-outlet></router-outlet>
+
+    

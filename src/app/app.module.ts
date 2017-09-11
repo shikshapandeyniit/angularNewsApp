@@ -10,6 +10,7 @@ import { NewsSearchComponent } from './news-search/news-search.component';
 import { NewsDetailsComponent } from './news-details/news-details.component';
 import { FavoriteComponent } from './favorite/favorite.component';
 import {NewsServiceService} from './news-service.service';
+import { TopNewsComponent } from './top-news/top-news.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {NewsServiceService} from './news-service.service';
     NewsComponent,
     NewsSearchComponent,
     NewsDetailsComponent,
-    FavoriteComponent
+    FavoriteComponent,
+    TopNewsComponent
   ],
   imports: [
 
@@ -29,6 +31,10 @@ import {NewsServiceService} from './news-service.service';
     {
       path:'news',
       component:NewsComponent
+    },
+    {
+      path:'topNews',
+      component:TopNewsComponent
     },
     {
       path:'search',
@@ -42,6 +48,11 @@ import {NewsServiceService} from './news-service.service';
     {
       path:'fav',
       component:FavoriteComponent
+    },
+    {
+      path:'',
+      redirectTo:'/topNews',
+      pathMatch:'full'
     }
     ])
 

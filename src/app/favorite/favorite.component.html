@@ -1,6 +1,6 @@
 
-<div class="container">
-<!-- <button type="button" class="btn btn-info" (click)="favorite()">Favorite</button> -->
+<!-- <div class="container">
+
     <div class="card-group">
       <div class="card cardsize">
         <div class="row">
@@ -9,11 +9,40 @@
             <div class="card-body">
               <h4 class="card-title"> <a href="{{data.url}}" target="blank">{{data.title}}</a></h4>
               <p class="card-text">{{data.description}}</p>
-              <a href="/favorite" class="btn btn-danger" (click)="delete(data)">Delete</a>
+              <a href="/fav" class="btn btn-danger" (click)="delete(data)">Delete</a>
             </div>
             <div class="card-footer text-muted">{{data.publishedAt}}</div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<section>
+<div class="container">
+  <div class="card-group">
+    <div class="card cardsize">
+      <div class="row">
+        <div class='col-md-4' *ngFor="let data of data">
+    
+       <!--  <h2 class="text-center"><span>Bootstrap 4 Cards</span>Created with <i class="fa fa-heart"></i> from<a href="http://grafreez.com"> Grafreez.com</a></h2>      -->
+       
+            
+          <div class="card card-01">
+           <img class="card-img-top cardimg" src="{{data.urlToImage}}" alt="No image" class="img-fluid">
+          <div class="card-body">
+            <span class="badge-box"><i class="fa fa-check"></i></span>
+            <h4 class="card-title"> <a href="{{data.url}}" target="blank">{{data.title}}</a></h4>
+            <p class="card-text">{{data.description}}</p>
+            <<a href="/fav" class="btn btn-danger" (click)="delete(data)">Delete</a>
+           
+          </div>
+        </div>
+        </div>
+          </div>
+    </div>
+    </div>
+    </div>
+</section>

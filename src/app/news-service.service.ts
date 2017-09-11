@@ -36,7 +36,11 @@ search() {
       return this.http.delete('http://localhost:3000/tour/'+data._id)
       .map(res =>res.json())
     }
-  
+  topNews() {
+  return this.http.get( 'https://newsapi.org/v1/articles?source=the-next-web&sortBy=latest&apiKey=4d60cbe4bd014f84bbb26f999f115b8d')
+   .map(response => response.json());
+   
+}
 
 }
 
