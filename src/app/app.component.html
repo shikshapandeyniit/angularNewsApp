@@ -1,0 +1,51 @@
+<!-- <app-news></app-news>
+<h1>Angular Router</h1>
+ -->   <!--  <nav> -->
+     <!--  <button routerLink="/news" routerLinkActive="active">NewsComponent</button>
+      </nav>
+
+      <nav>
+      <button routerLink="/search" routerLinkActive="active">NewsSearchComponent</button>
+       <button routerLink="/fav" routerLinkActive="active">FavouriteComponent</button>
+      
+    </nav>
+
+ -->
+ <!DOCTYPE html>
+<html>
+<div class="jumbotron text-center container">
+  <h1>News</h1>
+  
+</div>
+
+<div class="container">
+<nav>
+  <div class="inner">
+    <!--<input class="search_box" type=search placeholder="Search...">
+    <div class="search"><i class="fa fa-search"></i></div> -->  
+    <!-- <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      </ul> -->
+      <!-- <li><input class="search_box" type=search placeholder="Search..."></li>
+      <li><div class="search"><i class="fa fa-search"></i></div></li> -->
+		
+      <button routerLink="/search" routerLinkActive="active" class="btn btn-success">NewsSearchComponent</button>
+       <button routerLink="/fav" routerLinkActive="active" class="btn btn-success">FavoriteComponent</button>
+      
+    
+  </div>
+  </nav>
+ <!-- <select name="search" #searchTerm$>
+ 	<option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
+ </select>
+ <input name="search" #searchTerm$> -->
+<!-- <button class="btn btn-sm btn-info" (click)="search(searchTerm$)">Search </button>
+ --> 
+
+</div>
+</html>
+
+
+
+    <router-outlet></router-outlet>

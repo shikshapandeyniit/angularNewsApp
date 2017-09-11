@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="card-group">
+    <div class="card cardsize">
+      <div class="row">
+        <div class='col-md-6' *ngFor="let result of results">
+          <img class="card-img-top cardimg" src="{{result.urlToImage}}" alt="No image" width="350px" height="250px">
+          <div class="card-body">
+            <h4 class="card-title"> <a href="{{result.url}}" target="blank">{{result.title}}</a></h4>
+            <p class="card-text">{{result.description}}</p>
+            <a href="#" class="btn btn-primary" (click)="add(result)">Add</a>
+          </div>
+          <div class="card-footer text-muted">{{result.publishedAt}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

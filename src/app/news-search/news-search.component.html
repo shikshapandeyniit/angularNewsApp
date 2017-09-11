@@ -1,0 +1,7 @@
+ <div class="container">
+ <select name="search" #searchTerm$>
+ 	<option *ngFor="let news of post" #name [value]="news.id">{{news.name}}</option>
+ </select>
+<!--  <input name="search" #searchTerm$> -->
+<button class="btn btn-sm btn-info" (click)="search(searchTerm$)">Search </button>
+</div>
